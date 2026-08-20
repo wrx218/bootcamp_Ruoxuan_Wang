@@ -4,20 +4,20 @@ import pandas as pd
 
 
 def get_summary_stats(df: pd.DataFrame) -> pd.DataFrame:
-    """Return descriptive statistics for all numeric columns."""
+    """Return descriptive statistics for numeric columns."""
     return df.select_dtypes(include="number").describe()
 
 
 def get_category_summary(df: pd.DataFrame) -> pd.DataFrame:
-    """Aggregate sales and quantity by category."""
+    """Aggregate the value column by category."""
     return (
         df.groupby("category")
         .agg(
-            sales_count=("sales", "count"),
-            average_sales=("sales", "mean"),
-            total_sales=("sales", "sum"),
-            average_quantity=("quantity", "mean"),
-            total_quantity=("quantity", "sum"),
+            value_count=("value", "count"),
+            average_value=("value", "mean"),
+            total_value=("value", "sum"),
+            minimum_value=("value", "min"),
+            maximum_value=("value", "max"),
         )
         .round(2)
     )

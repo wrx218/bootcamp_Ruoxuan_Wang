@@ -1,3 +1,3 @@
 # Homework 03: Python Fundamentals
 
-This submission explores a small sales dataset using NumPy and pandas. It demonstrates elementwise array operations, compares loop and vectorized performance, inspects the source CSV, calculates descriptive and grouped statistics, saves processed outputs, and creates a basic category-level plot. Reusable summary logic is stored in `src/utils.py`, and the notebook contains all required steps with saved outputs.
+This submission uses the provided `starter_data.csv`, which contains `category`, `value`, and `date` columns. The notebook demonstrates NumPy elementwise operations, compares loop and vectorized performance, loads and inspects the supplied dataset, calculates numeric and category-level summaries, saves processed CSV outputs, and creates an average-value plot. Reusable functions are stored in `src/utils.py`.
